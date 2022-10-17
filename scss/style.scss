@@ -26,25 +26,6 @@
             color: white;
             overflow: hidden;
         }
-        .typeAnimation{
-            animation: blinkCursor 500ms steps(40) infinite normal, typing 4s steps(10) 1s infinite normal both;
-        }
-        @keyframes typing {
-            from{
-                width: 0;
-            }
-            to{
-                width: 7.7em;
-            }
-        }
-        @keyframes blinkCursor {
-            from{
-                border-right: solid 2px rgba(255, 255, 255, 0.705);
-            }
-            to{
-                border-right: solid 2px transparent;
-            }
-        }
     }
     .main{
         height: 100vh;
@@ -87,10 +68,6 @@
                 border-radius: 30px;
                 border: none;
             }
-            .charKey:hover{
-                transform: scale(1.05);
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-            }
             #clear{
                 max-width: 120px;
                 height: 85px;
@@ -100,10 +77,6 @@
                 color: white;
                 border-radius: 30px;
                 border: none;
-            }
-            #clear:hover{
-                transform: scale(1.05);
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
             }
             #equal{
                 max-width: 120px;
@@ -115,10 +88,6 @@
                 border-radius: 30px;
                 border: none;
             }
-            #equal:hover{
-                transform: scale(1.05);
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
-            }
             #copyClipboard{
                 width: 120px;
                 height: 85px;
@@ -129,13 +98,12 @@
                 background-color: $buttonOperator;
                 border-radius: 30px;
                 border: none;
-            }
-            #copyClipboard:hover{
-                transform: scale(1.05);
-                box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+                box-shadow: 5px 5px 0 #5f201f, 6px 6px 0 #110605;
             }
             .success{
                 background-color: darkgreen !important;
+                box-shadow: inset 5px 5px 0 #110605 !important;
+                font-size: 1.5rem !important;
             }
             #resultDisplay{
                 text-align: end;
@@ -155,12 +123,22 @@
             }
             .btn-operation{
                 background-color: $buttonOperator;
+                box-shadow: 5px 5px 0 #5f201f, 6px 6px 0 #110605;
+            }
+            .btn-operation:active{
+                box-shadow: inset 5px 5px 0 #110605;
+                font-size: 1.5rem;
             }
             .btn-number{
                 background-color: $buttonNumber;
+                box-shadow: 5px 5px 0 #0f4b5f, 6px 6px 0 #110605;
             }
-        }
+            .btn-number:active{
+                box-shadow: inset 5px 5px 0 #110605;
+                font-size: 1.5rem;
+            }
     }
+}
     footer{
         height: 100px;
         width: 100%;

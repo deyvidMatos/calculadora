@@ -1,4 +1,5 @@
 import calculate from "./calculate.js";
+import copyToClipboard from "./copyToClipboard.js";
 
 const displayOperation = document.getElementById("displayOperation");
 const resultDisplay = document.getElementById("resultDisplay");
@@ -12,7 +13,6 @@ export function handleClear(ev){
     displayOperation.value = ""
     displayOperation.focus()
     resultDisplay.value = ""
-
 }
 
 export function handleTyping(ev){
